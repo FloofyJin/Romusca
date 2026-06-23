@@ -1,3 +1,5 @@
+I have written about how its all connected in [[Design]].
+
 ROS2 is a tool that packs libraries, framework, and utilities that allows me to control the robot and debug real time. It is the industry standard for developing a robot at large scale.
 
 I designed a 4 axis locomotive in URDF. It kinda looks  ugly but thats not the point. With this, I can manipulate the arm visually with the drag of a slider.
