@@ -1,12 +1,12 @@
+I have written about how its all connected in [[Design]].
+
 Memory reserved for shared purpose is 0x1e00000 with size 0x10000
 Memory reserved for rtos is 0x1e010000 with size 0x1ff0000
 
 CPU0 runs petalinux
 CPU1 runs RTOS
 # RTOS
-You must first create platform with cortex1. Ensure you are using the same .xsa file as the one used for creating petalinux project for Application.
-You're not running bare-metal "on the fabric." You're running bare-metal on the ARM processor, and the ARM talks to hardware you've built in the fabric.
-
+Otherwise called Real Time Operating System is the wrapper on top of [[Bare metal]] program used for controlling peripherals in FPGA. In my system, RTOS controls the 4 servos and blinkers. This is the glue that connects petalinux to board.
 ### Limit where bare metal runs
 Go find lscript.ld in your application directory. It should be inside src folder.
 Create a new available memory space called `rtos_mem_ps` with  base address 0x1E010000 with size 0x1FF0000. This should match what area of memory is reserved by petalinux.
