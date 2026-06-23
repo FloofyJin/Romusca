@@ -1,6 +1,3 @@
 ---
-title: Welcome to Axle
+title: Axle
 ---
-
-Glossary:
-- Design
