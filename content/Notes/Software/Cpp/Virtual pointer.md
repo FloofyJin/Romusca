@@ -1,0 +1,1 @@
+A **virtual pointer** (commonly called a **vptr**) is a hidden pointer automatically added by the compiler to any object of a class that declares or inherits at least one virtual function.

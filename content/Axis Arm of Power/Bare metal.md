@@ -1,4 +1,4 @@
-I have written about how its all connected in [[Design]].
+I have written about how its all connected in [[Axis Arm of Power/Design]].
 
 All data passed through shared memory will be read as an object of type `shared_data_t`. The object contains checksum and and sequence counter. This ensures we aren't reading stale data and no corruption has occurred.
 ```c
@@ -23,3 +23,10 @@ However, my program doesnt take time as input; instead, it uses ticks. My Proces
 ```
 Using xil_io, I can write directly AXI. Base address for the servo controller for me was `0x43C00000`. Each input is offset by 4.
 With all this, we can read from shared memory, set Translation Lookaside Buffer, and control the servo.
+
+---
+Relevant pages
+- [[Bare metal]]
+- [[Axis Arm of Power/Design]]
+- [[How do I make this real time]]
+- [[ROS2]]

@@ -108,3 +108,10 @@ Xil_Out32(SERVO_BASEADDR + SERVO3_OFFSET, ticks);
 
 ### Block diagram
 ![[Pasted image 20260621104754.png]]
+
+---
+Relevant pages
+- [[Bare metal]]
+- [[Axis Arm of Power/Design]]
+- [[How do I make this real time]]
+- [[ROS2]]

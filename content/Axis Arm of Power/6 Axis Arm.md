@@ -1,4 +1,4 @@
-I have written about how its all connected in [[Design]].
+I have written about how its all connected in [[Axis Arm of Power/Design]].
 
 Memory reserved for shared purpose is 0x1e00000 with size 0x10000
 Memory reserved for rtos is 0x1e010000 with size 0x1ff0000
@@ -49,3 +49,10 @@ Note:
 ### Servo high inrush current 
 Commanding the servo to move from $180^\circ$ to $10^\circ$ will attempt to turn at full torque to bridge the  $170^\circ$ gap as fast as possible. This causes a spike in power draw. This will possibly disconnect USB to UART connection as all the power flows to the servo to meet that demand
 TLDR, motors use a lot of energy, have external power source for your motors to prevent brownout.
+
+---
+Relevant pages
+- [[Bare metal]]
+- [[Axis Arm of Power/Design]]
+- [[How do I make this real time]]
+- [[ROS2]]

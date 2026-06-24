@@ -1,13 +1,1 @@
 @use "./variables.scss" as *;
-
-// Fix: upstream table-of-contents plugin collapses .toc to 1.4rem, clipping the header button.
-// overflow: visible overrides the overflow-y: hidden from both the plugin CSS and base.scss's
-// div:has(> .overflow) rule. flex: 0 0 auto sizes to the button's natural height instead.
-.toc:has(button.toc-header.collapsed) {
-  flex: 0 0 auto;
-  overflow: visible;
-}
-
-ul.toc-content.collapsed {
-  display: none;
-}

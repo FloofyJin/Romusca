@@ -1,0 +1,1 @@
+It is a type of oscillator that uses electromechanical relay instead of transistors, tubes, or op amps

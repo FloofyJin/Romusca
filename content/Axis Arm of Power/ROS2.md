@@ -1,4 +1,4 @@
-I have written about how its all connected in [[Design]].
+I have written about how its all connected in [[Axis Arm of Power/Design]].
 
 ROS2 is a tool that packs libraries, framework, and utilities that allows me to control the robot and debug real time. It is the industry standard for developing a robot at large scale.
 
@@ -78,3 +78,10 @@ RVIZ updating:
 Logs:
 ![[Pasted image 20260621160137.png]]
 ![[Pasted image 20260621160142.png]]
+
+---
+Relevant pages
+- [[Bare metal]]
+- [[Axis Arm of Power/Design]]
+- [[How do I make this real time]]
+- [[ROS2]]
