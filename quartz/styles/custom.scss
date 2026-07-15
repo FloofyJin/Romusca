@@ -1,1 +1,13 @@
 @use "./variables.scss" as *;
+
+// Table of Contents: the collapsed header holds a 24px (1.5rem) fold icon,
+// but the plugin collapses the container to 1.4rem with overflow hidden, which
+// clips the header so it looks hidden. Give it enough room to show fully.
+// (button 1.5rem + the 0.5rem list margin = 2rem, matching expanded spacing.)
+.toc {
+  min-height: 4rem;
+
+  &:has(button.toc-header.collapsed) {
+    flex: 0 1 4rem;
+  }
+}
