@@ -2,38 +2,37 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import github from '$lib/images/github.svg';
-	import logo from '$lib/images/svelte-logo.svg';
+	import { theme, toggleTheme } from '$lib/theme.svelte';
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://svelte.dev/docs/kit">
-			<img src={logo} alt="SvelteKit" />
-		</a>
 	</div>
 
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
 		<ul>
 			<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
 				<a href={resolve('/')}>Home</a>
 			</li>
-			<li aria-current={page.url.pathname === '/about' ? 'page' : undefined}>
+			<!-- <li aria-current={page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href={resolve('/about')}>About</a>
-			</li>
-			<li aria-current={page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href={resolve('/sverdle')}>Sverdle</a>
+			</li> -->
+			<li aria-current={page.url.pathname === '/resume' ? 'page' : undefined}>
+				<a href={resolve('/resume')}>Resume</a>
 			</li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
 	</nav>
 
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+	<div class="corner actions">
+		<button
+			class="theme-toggle"
+			type="button"
+			onclick={toggleTheme}
+			aria-label={theme.current === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+		>
+			{theme.current === 'dark' ? '☀️' : '🌙'}
+		</button>
+		<a class="icon-link" href="https://github.com/FloofyJin">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
@@ -64,10 +63,40 @@
 		object-fit: contain;
 	}
 
+	.corner.actions {
+		width: auto;
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+	}
+
+	.corner.actions .icon-link {
+		width: 3em;
+	}
+
+	.theme-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2em;
+		height: 2em;
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		font-size: 1.1em;
+		line-height: 1;
+		padding: 0;
+		border-radius: 50%;
+		transition: background-color 0.2s ease;
+	}
+
+	.theme-toggle:hover {
+		background-color: rgba(128, 128, 128, 0.15);
+	}
+
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
 	}
 
 	svg {
@@ -89,7 +118,7 @@
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		background: var(--background);
+		/* background: var(--background); */
 		background-size: contain;
 	}
 
@@ -105,9 +134,6 @@
 		height: 0;
 		position: absolute;
 		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
 	}
 
 	nav a {
