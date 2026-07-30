@@ -33,7 +33,11 @@
 			onclick={toggleTheme}
 			aria-label={theme.current === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
 		>
-			{theme.current === 'dark' ? '☀️' : '🌙'}
+			{#if theme.current === 'dark'}
+				<img src="/sun.png" alt="" id="sunImg" />
+			{:else}
+				<img src="/moon.png" alt="" />
+			{/if}
 		</button>
 		<a class="icon-link" href="https://github.com/FloofyJin">
 			<img src={github} alt="GitHub" />
@@ -42,6 +46,11 @@
 </header>
 
 <style>
+
+	#sunImg {
+		filter: invert(1);
+	}
+
 	header {
 		display: flex;
 		justify-content: space-between;
@@ -91,6 +100,12 @@
 		padding: 0;
 		border-radius: 50%;
 		transition: background-color 0.2s ease;
+	}
+
+	.theme-toggle img {
+		width: 1.2em;
+		height: 1.2em;
+		object-fit: contain;
 	}
 
 	.theme-toggle:hover {
