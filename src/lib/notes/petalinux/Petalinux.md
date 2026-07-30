@@ -16,7 +16,7 @@ Check that all the Hardware Settings are as it should be. You shouldnt need to m
 
 ==TIP==: If you are on virtualbox, you can create a shared folder.  First, go to setting for the vm to enable auto mount on the host folder of choice. Then, create a folder in ubuntu: `mkdir sharedFolder` and `sudo mount -t vboxsf sharedFolder ~/sharedFolder`
 
-==TIP==: You might have issues with permission error during runs. Run this command: `sudo chown -R $USER:$USER
+==TIP==: You might have issues with permission error during runs. Run this command: `sudo chown -R $USER:$USER`
 
 ==TIP==: If you get an error along the lines of "libtinfo.so.5: cannot open shared object file", then install it.
 ```bash

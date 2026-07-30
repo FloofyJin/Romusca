@@ -17,6 +17,9 @@
 			<!-- <li aria-current={page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href={resolve('/about')}>About</a>
 			</li> -->
+			<li aria-current={page.url.pathname.startsWith('/notes') ? 'page' : undefined}>
+				<a href={resolve('/notes')}>Notes</a>
+			</li>
 			<li aria-current={page.url.pathname === '/resume' ? 'page' : undefined}>
 				<a href={resolve('/resume')}>Resume</a>
 			</li>
