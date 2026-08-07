@@ -49,3 +49,11 @@ Note:
 ### Servo high inrush current 
 Commanding the servo to move from $180^\circ$ to $10^\circ$ will attempt to turn at full torque to bridge the  $170^\circ$ gap as fast as possible. This causes a spike in power draw. This will possibly disconnect USB to UART connection as all the power flows to the servo to meet that demand
 TLDR, motors use a lot of energy, have external power source for your motors to prevent brownout.
+
+---
+## Index
+- [[Bare metal]]
+- [[Design]]
+- [[How do I make this real time]]
+- [[Petalinux]]
+- [[Using ROS2]]

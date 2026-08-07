@@ -21,7 +21,7 @@ Counting it all up,  its 13bytes = 13 * 8 = 104 bits in a packet
 
 at 125000000 / 2 = 62500000 bits/second = 62500000 Mhz SPI speed
 
-That would mean we can transmit up to 62500000/104 = 600,961 packets a second. This is the FPGA fabric ceiling on how fast we can transmit information.
+That would mean we can transmit up to 62500000/104 = **600,961packets/second**. This is the FPGA fabric ceiling on how fast we can transmit information. This is how many points we can plot on the display a second
 
 ---
 In my demo, I used 1Mhz clock for SPI.
@@ -34,4 +34,4 @@ I also put a slow down between transmission of 200ms.
 
 Here's the problem, I can increase the transmission speed but CC1101 can only accept data at a speed of 6.5MHz, so my realistic cap would be 60,096 packets a second.
 
-But there's also air interference to worry about. at 38.4 kbps (12-byte packet), its 400s
+But there's also air interference to worry about. At 38.4 kbps (12-byte packet), its 400packets/s
