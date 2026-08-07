@@ -5,3 +5,4 @@
 - [[GPIO]]
 - [[Libraries]]
 - [[shared memory]]
+- [[Petalinux]]
