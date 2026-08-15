@@ -1,5 +1,8 @@
 # Romusca
 
+<img width="2087" height="1107" alt="image" src="https://github.com/user-attachments/assets/dc5b19ac-bdea-488f-bd36-d8548bd7ac19" />
+
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
