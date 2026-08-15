@@ -1,0 +1,1 @@
+Process of transforming an electronic circuit design description into gate level netlist that can be implemented in hardware.
